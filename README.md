@@ -49,3 +49,62 @@ mykmeans.init(document.getElementById("mykmeans"), {
 
 Take a look at [examples/hello.html](https://github.com/study-ml/kmeans-js/blob/main/examples/hello.html) for more information
 
+## Work with the [chart table](https://github.com/study-ml/chart-table)
+
+Include the libraries
+
+```html
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="../dist/kmeansjs.min.js"></script>
+<script src="../dist/charttable.min.js"></script>
+<link rel="stylesheet" href="../dist/kmeansjs.min.css"></link>
+<link rel="stylesheet" href="../dist/charttable.min.css"></link>
+```
+
+Create div elements to hold the table
+
+```html
+<div id="mytable"></div>
+<div id="mykmeans"></div>
+```
+
+Work with [chart table](https://github.com/study-ml/chart-table)
+
+```javascript
+const mytable = charttable.table();
+const mykmeans = kmeansjs.kmeans();
+const tol_vibrant = ["#EE7733", "#0077BB", "#33BBEE", "#EE3377", "#CC3311", "#009988"];
+mytable.initTbl(document.getElementById("mytable"), {
+    colors: tol_vibrant,
+    minSelectedRow2Show: 4,
+    minSelectedCol2Show: 2,
+    height: 540,
+    onSelect: function(data) {
+    mykmeans.init(document.getElementById("mykmeans"), {
+        selectedDataSet: data.selectedRows, 
+        selectedColumns: data.selectedColumns
+    });
+    }
+});
+
+mytable.showDataset([
+    {age: 30, year_of_operation: 65, positive_axillary_nodes: 0, survival_status: 1},
+    {age: 38, year_of_operation: 66, positive_axillary_nodes: 0, survival_status: 1},
+    {age: 42, year_of_operation: 59, positive_axillary_nodes: 0, survival_status: 2},
+    {age: 49, year_of_operation: 63, positive_axillary_nodes: 0, survival_status: 2},
+    {age: 49, year_of_operation: 61, positive_axillary_nodes: 0, survival_status: 1},
+    {age: 55, year_of_operation: 66, positive_axillary_nodes: 18, survival_status: 1},
+    {age: 56, year_of_operation: 60, positive_axillary_nodes: 0, survival_status: 1},
+    {age: 61, year_of_operation: 65, positive_axillary_nodes: 0, survival_status: 2},
+    {age: 61, year_of_operation: 59, positive_axillary_nodes: 0, survival_status: 1},
+    {age: 64, year_of_operation: 66, positive_axillary_nodes: 0, survival_status: 1}
+]);
+```
+
+![charttable](imgs/charttable.png)
+
+# TODO
+* use `webpack` to build
+* publish to npm and `CDN - UNPKG`
+* remove `charttable.min.js` once we can publish to npm
+
