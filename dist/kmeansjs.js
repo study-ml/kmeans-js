@@ -182,13 +182,13 @@ exports.kmeans = function() {
     select.setAttribute("name", "kvalue");
     select.setAttribute("id", "kvalue");
     var opt1 = document.createElement("option");
-    opt1.innerText="3";
+    opt1.innerText="2";
     select.appendChild(opt1);
     var opt2 = document.createElement("option");
-    opt2.innerText="4";
+    opt2.innerText="3";
     select.appendChild(opt2);
     var opt3 = document.createElement("option");
-    opt3.innerText="5";
+    opt3.innerText="4";
     select.appendChild(opt3);
     select.addEventListener('change', function() {
       initInternal();
