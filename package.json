@@ -1,0 +1,21 @@
+{
+  "name": "kmeans-js",
+  "version": "1.0.0",
+  "description": "k-means algorithm in javascript",
+  "main": "dist/kmeansjs.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": ["dist/*.js", "dist/*.css"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/study-ml/kmeans-js.git"
+  },
+  "author": "Lee, Yun-Wei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/study-ml/kmeans-js/issues"
+  },
+  "homepage": "https://github.com/study-ml/kmeans-js#readme"
+}
+
