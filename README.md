@@ -10,11 +10,14 @@ Include the libraries
 ```html
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="../dist/kmeansjs.min.js"></script>
-<link rel="stylesheet" href="../dist/kmeansjs.min.css"></link>
+<link rel="stylesheet" href="../dist/kmeansjs.min.css" />
 ```
 
 ## CDN - UNPKG
-* TODO
+```html
+<script src="https://unpkg.com/@ywlee/k-means-js@1.0.0/dist/kmeansjs.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@ywlee/k-means-js@1.0.0/dist/kmeansjs.min.css" /> 
+```
 
 # Usage
 ## Hello World example
@@ -105,6 +108,4 @@ mytable.showDataset([
 
 # TODO
 * use `webpack` to build
-* publish to npm and `CDN - UNPKG`
-* remove `charttable.min.js` once we can publish to npm
 

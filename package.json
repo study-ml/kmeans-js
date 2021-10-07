@@ -1,5 +1,5 @@
 {
-  "name": "kmeans-js",
+  "name": "@ywlee/k-means-js",
   "version": "1.0.0",
   "description": "k-means algorithm in javascript",
   "main": "dist/kmeansjs.min.js",
